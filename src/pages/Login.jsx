@@ -60,7 +60,7 @@ const  Login=()=> {
                 <div>
                     <h1>Create Account</h1>
                     <div className='text-center text-info' onClick={Toggle} style={{cursor:"pointer"}}>Already a member? Login </div> 
-                    {message}
+                    
                     </div>
                 <div className=''>
                     <form >

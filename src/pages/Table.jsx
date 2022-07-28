@@ -4,6 +4,7 @@ import MaterialTable from "@material-table/core";
 function Table() {
  
   const [products, setProducts] = useState([]);
+  // const [curruncies, setcurruncies] = useState([])
   
  const LogoutFn=()=>{
   localStorage.clear()
@@ -19,8 +20,8 @@ function Table() {
           .then((response) => response.json())
           
               .then((data) => setProducts(data));
-    
               console.log(products)
+             
             };
            
           getProducts();
@@ -28,10 +29,14 @@ function Table() {
 
     },[])
     
-
+   
  
   
-
+    // let curr= data.map((element, i)=>{
+    //   return element.currencies[0].code
+    // })
+    // console.log(curr);
+    // setcurruncies(products);
    
   
   return (
@@ -50,7 +55,7 @@ function Table() {
                field: "capital" },
                {
                 title: "CURRENCIES",
-                field: "curruncy"
+                field: "currencies[0].name"
               },
             ]}
             options={{
