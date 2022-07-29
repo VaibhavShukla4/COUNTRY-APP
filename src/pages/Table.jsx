@@ -57,6 +57,10 @@ function Table() {
                 title: "CURRENCIES",
                 field: "currencies[0].name"
               },
+              {
+                title: "CURRENCIES(SYMBOL)",
+                field: "currencies[0].symbol"
+              },
             ]}
             options={{
               
