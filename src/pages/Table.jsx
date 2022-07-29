@@ -53,6 +53,9 @@ function Table() {
 
                { title:"CAPITAL",
                field: "capital" },
+               { title: "FLAG",
+               field:  "flags",
+               render:  flags => <img src={"flags.svg"} alt="" border="3" height="100" width="100" />},
                {
                 title: "CURRENCIES",
                 field: "currencies[0].name"

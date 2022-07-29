@@ -56,7 +56,7 @@ const  Login=()=> {
             <div className="col">
             {
             showsignin ?(
-                <div className=' border rounded p-7 bg-white'>
+                <div className='  bg-white'>
                 <div>
                     <h1>Create Account</h1>
                     <div className='text-center text-info' onClick={Toggle} style={{cursor:"pointer"}}>Already a member? Login </div> 
@@ -64,14 +64,14 @@ const  Login=()=> {
                     </div>
                 <div className=''>
                     <form >
-                        <input type='text' className='border rounded m-1 w-100 py-2  ' placeholder=' First name' autoFocus required id='fstname'/><br />
+                        <input type='text' className='border rounded m-1 w-100 p-1 ' placeholder=' First name' autoFocus required id='fstname'/><br />
                         <input type='text' className='border rounded m-1 w-100 p-1' placeholder=' Last name' autoFocus required id='lstname'/><br />
-                        <input type='email' className='border rounded m-1 p-1 w-100' placeholder=' Email' autoFocus required id='email' /><br />
+                        <input type='email' className='border rounded m-1 w-100 p-1' placeholder=' Email' autoFocus required id='email' /><br />
                         <input type='password' id='password' className='border rounded m-1 p-1 w-100' placeholder=' Password' autoFocus required /><br />
-                        <input type='password' className='border rounded m-1 p-1 w-100' placeholder=' Confirm password' id='cnfpassword' autoFocus required /><br />
-                        <div className='d-flex justify-content-center '> <button  className='btn w-100 btn-primary  my-2 p-1'onClick={signupFn}>Sign Up <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-arrow-right " viewBox="0 0 16 16">
+                        <input type='password' className='border rounded m-1 w-100 p-1' placeholder=' Confirm password' id='cnfpassword' autoFocus required /><br />
+                        <button  className='d-flex justify-content-center btn btn-primary w-100 my-1 p-1' onClick={signupFn}>Sign Up <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-arrow-right " viewBox="0 0 16 16">
   <path fillRule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
-</svg></button></div>
+</svg></button>
                     </form>
                    <b className='text-secondry'>{message}</b>
                 </div>
@@ -81,7 +81,7 @@ const  Login=()=> {
         
             ):(
                 
-                <div className=' border rounded p-5 bg-white'>
+                <div className='  bg-white'>
                     <div>
                         <h1>Please Login</h1>
                         <div className='text-center text-info' onClick={Toggle} style={{cursor:"pointer"}}>Not a member? Signup </div> 
@@ -92,7 +92,7 @@ const  Login=()=> {
                             <input type='email' className='border rounded m-1 p-1 w-100' placeholder=' Email'id='email1' autoFocus required /><br />
                             <input type='password' className='border rounded m-1 p-1 w-100' placeholder=' Password'id='password1' autoFocus required /><br />
 
-                            <div className='d-flex justify-content-center '> <button className='btn w-100 btn-primary  my-2 p-1'onClick={loginFn}>Signin</button></div>
+                             <button className='d-flex justify-content-center  btn btn-primary w-100 m-1 p-1' onClick={loginFn}>Signin</button>
                             <b className='text-danger'>{message}</b>
                         </div>
 
