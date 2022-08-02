@@ -1,10 +1,10 @@
 import { useState,useEffect } from 'react';
-import getProducts from '../api/api'
+
 import MaterialTable from "@material-table/core";
 function Table() {
  
   const [products, setProducts] = useState([]);
-  // const [curruncies, setcurruncies] = useState([])
+  // const [loading, setLoading] = useState(false)
   
  const LogoutFn=()=>{
   localStorage.clear()
@@ -31,7 +31,7 @@ const getProducts = async () => {
     },[])
     
    
- 
+
   
     // let curr= data.map((element, i)=>{
     //   return element.currencies[0].code
@@ -42,6 +42,7 @@ const getProducts = async () => {
   
   return (
     <div className='mt-4'>
+    <h2>COUNTRY APP</h2>
 <div className='d-flex justify-content-end '><button className='btn btn-primary' onClick={LogoutFn}>Logout</button></div>
 
        <MaterialTable
@@ -49,8 +50,10 @@ const getProducts = async () => {
           
           
             columns={[
+             
               { title: "COUNTRY",
-               field: "name" },
+               field: "name" 
+               },
 
                { title:"CAPITAL",
                field: "capital" },

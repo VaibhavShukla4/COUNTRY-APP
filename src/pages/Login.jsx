@@ -50,13 +50,14 @@ const  Login=()=> {
     }
     return(
 
-        <div className="bg-primary d-flex justify-content-center align-items-center vh-100">
-            <div className="card m-5 p-5">
-            <div className="row">
-            <div className="col">
+        <div className="col-md-12 justify-content-center align-items-center  bg-primary vh-100">
+        <h1 className=" col-md-12 d-flex justify-content-center align-items-center" style={{ color: "white" ,paddingTop:"10%"}}>COUNTRY APP</h1>
+            <div className="card col-md-12 d-flex justify-content-center align-items-center  p-5 " style={{width:"30%",marginLeft:"35%" ,marginTop:"3%"}}>
+            <div className="row ">
+            <div className="col ">
             {
             showsignin ?(
-                <div className='  bg-white'>
+                <div className=' bg-white'>
                 <div>
                     <h1>Create Account</h1>
                     <div className='text-center text-info' onClick={Toggle} style={{cursor:"pointer"}}>Already a member? Login </div> 
