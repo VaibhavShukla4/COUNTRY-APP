@@ -1,5 +1,5 @@
 import { useState,useEffect } from 'react';
-
+import getProducts from '../api/api'
 import MaterialTable from "@material-table/core";
 function Table() {
  
@@ -11,19 +11,20 @@ function Table() {
   console.log("hi")
   window.location.href ="/"
  }
+
+
+const getProducts = async () => {
+    
+  await fetch("https://restcountries.com/v2/all")
+
+  .then((response) => response.json())
+  
+      .then((data) => setProducts(data));
+      console.log(products)
+     
+    };
     useEffect(()=>{
       
-      const getProducts = async () => {
-    
-          await fetch("https://restcountries.com/v2/all")
-      
-          .then((response) => response.json())
-          
-              .then((data) => setProducts(data));
-              console.log(products)
-             
-            };
-           
           getProducts();
          
 
@@ -53,9 +54,13 @@ function Table() {
 
                { title:"CAPITAL",
                field: "capital" },
+               { title:"CONTINENT",
+               field: "region" },
                { title: "FLAG",
-               field:  "flags",
-               render:  flags => <img src={"flags.svg"} alt="" border="3" height="100" width="100" />},
+               field: "flags",
+               render: products => <img src={products.flags.svg} alt="" border="3" height="100" width="100" />,
+                 },
+                 
                {
                 title: "CURRENCIES",
                 field: "currencies[0].name"
@@ -68,11 +73,12 @@ function Table() {
             options={{
               
               headerStyle: {
-                backgroundColor: "#0F3443",
+                backgroundColor: "#3D5AFE",
                 color: "#fff",
               },
               rowStyle: {
-                backgroundColor: "#eee",
+                backgroundColor: "#9C27B0",
+                color: "#fff"
               },
             }}
             title="DASHBOARD"
@@ -84,3 +90,5 @@ function Table() {
 }
 
 export default Table;
+// #9C27B0
+// #B388FF
